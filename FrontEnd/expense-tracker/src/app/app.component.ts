@@ -5,11 +5,12 @@ import { CategoryExpenseComponent } from "../category-expense/category-expense.c
 import { SignupPageComponent } from "../signup-page/signup-page.component";
 import { TrackExpenseComponent } from "../track-expense/track-expense.component";
 import { ViewProfileComponent } from "../view-profile/view-profile.component";
+import { AddExpenseComponent } from '../add-expense/add-expense.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,LoginPageComponent, CategoryExpenseComponent, SignupPageComponent, TrackExpenseComponent, ViewProfileComponent,RouterLinkActive,RouterLink,RouterModule],
+  imports: [RouterOutlet,LoginPageComponent, CategoryExpenseComponent, SignupPageComponent, TrackExpenseComponent, ViewProfileComponent,AddExpenseComponent,RouterLinkActive,RouterLink,RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
