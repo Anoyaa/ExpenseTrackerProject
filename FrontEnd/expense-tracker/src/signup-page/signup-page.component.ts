@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IRegister } from '../i-register.interface';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { CustomerServiceService } from '../customer-service.service';
 
 
@@ -16,7 +15,6 @@ import { CustomerServiceService } from '../customer-service.service';
 export class SignupPageComponent {
 
   RegisterUser!: FormGroup<IRegister>;
-  password: string = '';
   registerSubmitted: boolean = false;
 
 /**
@@ -35,6 +33,7 @@ constructor(private customerService:CustomerServiceService) { }
         cPassword: new FormControl('', [Validators.required, Validators.minLength(8)])
       });
   }
+
   AddNewUser() {
     this.registerSubmitted = true;
     if (this.RegisterUser.valid) {
