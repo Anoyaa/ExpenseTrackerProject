@@ -48,7 +48,7 @@ export class AddExpenseComponent {
       {
         Amount: this.addExpenseDetails.value.Amount,
         Description: this.addExpenseDetails.value.Description,
-        Category:this.addExpenseDetails.value.Category,
+        CategoryName:this.addExpenseDetails.value.Category,
         UserId:this.addExpenseDetails.value.Id
       }
       this.expenseService.submitNewExpense(newExpense);

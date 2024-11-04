@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
   templateUrl: './view-profile.component.html',
   styleUrl: './view-profile.component.scss'
 })
-export class ViewProfileComponent {
+export class ViewProfileComponent 
+{
+
+  customerName:string='';
+  customerNumber:string='';
+
+
+  UpdateBudget() {
+    
+}
 
 }
