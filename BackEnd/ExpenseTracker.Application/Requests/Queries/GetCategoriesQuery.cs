@@ -8,6 +8,7 @@ using ExpenseTracker.Application.DTOs;
 using ExpenseTracker.Domain;
 using ExpenseTracker.Infrastructure.Data;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace ExpenseTracker.Application.Requests.Queries
 {
@@ -16,14 +17,8 @@ namespace ExpenseTracker.Application.Requests.Queries
         public int UserId { get; set; }
     }
 
-    public class GetCategoriesQueryHandler : IRequestHandler<GetCategoriesQuery, List<string>>
+    public class GetCategoriesQueryHandler(ExpenseTrackerContext context) : IRequestHandler<GetCategoriesQuery, List<string>>
     {
-        private readonly ExpenseTrackerContext context;
-
-        public GetCategoriesQueryHandler(ExpenseTrackerContext context)
-        {
-            this.context = context;
-        }
         public async Task<List<string>> Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
         {
             Users requiredUser = context.Users.FirstOrDefault(x => x.Id == request.UserId);
@@ -31,17 +26,14 @@ namespace ExpenseTracker.Application.Requests.Queries
 
             var query = from category in context.Category
                         where category.UserId == request.UserId || category.UserId == null
-                        select new
+                        select new CategoryDTO()
                         {
-                            categoryName = category.Name,
+                            Name = category.Name,
                         };
+            var data= query.ToListAsync(cancellationToken);
 
-            foreach (var retrievedCategory in query)
-            {
-                
-                categoryList.Add(retrievedCategory.categoryName);
-            }
-            return await Task.FromResult(categoryList);
+
+            return data;
         }
     }
 }

@@ -16,7 +16,7 @@ import { CustomerServiceService } from '../customer-service.service';
 export class SignupPageComponent {
 
   RegisterUser!: FormGroup<IRegister>;
-  password: string = '';
+  //password: string = '';
   registerSubmitted: boolean = false;
 
 /**

@@ -26,9 +26,9 @@ namespace ExpenseTracker.Application.Requests.Queries
         }
         public async Task<List<ExpenseDTO>> Handle(GetExpenseQuery request, CancellationToken cancellationToken)
         {
-            Users requiredUser = context.Users.FirstOrDefault(x => x.Id == request.UserId);
+            //Users requiredUser = context.Users.FirstOrDefault(x => x.Id == request.UserId);
 
-            List<ExpenseDTO> ExpenseList = new List<ExpenseDTO>();
+            List<ExpenseDTO> ExpenseList = [];
 
             var query = from expense in context.Expense
                         join user in context.Users on expense.UserId equals user.Id
@@ -42,7 +42,7 @@ namespace ExpenseTracker.Application.Requests.Queries
                             categoryName = category.Name,
                         };
 
-            foreach (var retrieverdExpense in query)
+            foreach (var retrieverdExpense in query)  //tolist
             {   
                 ExpenseDTO expenseDTO = new ExpenseDTO();
                 expenseDTO.Amount = retrieverdExpense.amount;

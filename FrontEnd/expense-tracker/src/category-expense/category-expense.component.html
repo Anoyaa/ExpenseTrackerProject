@@ -29,7 +29,7 @@
         </div> -->
     </div>
 
-    
+
 
     <div class="card flex-fill w-100 draggable">
         <!-- <div class="card-header">
@@ -50,17 +50,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Using *ngFor to populate the table with expenseList -->
                         <tr *ngFor="let expense of expenseList">
-                            <td>{{ expense.Description }}</td> <!-- Display expense description -->
-                            <td class="text-end">{{ expense.Amount }}</td> <!-- Display expense amount -->
+                            <td>{{ expense.Description }}</td>
+                            <td class="text-end">{{ expense.Amount }}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    
+
 
 
 

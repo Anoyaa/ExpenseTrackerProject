@@ -2,11 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, AfterViewInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Chart } from 'chart.js/auto';
+import { ExpenseServiceService } from '../expense-service.service';
 
 interface IExpense {
   Amount: number | null;
   Description: string | null;
   Category: string | null;
+  Date: Date | null;
 }
 
 @Component({
@@ -18,26 +20,41 @@ interface IExpense {
 })
 
 export class CategoryExpenseComponent implements AfterViewInit {
-  expenseList: IExpense[] = [
-    { Amount: 100, Description: 'fruits', Category: 'Food' },
-    { Amount: 2000, Description: 'Dolo', Category: 'Medical' },
-    { Amount: 200, Description: 'shawayi', Category: 'Food' },
-    { Amount: 500, Description: 'mandi', Category: 'Food' },
-    { Amount: 150, Description: 'petrol', Category: 'Fuel' },
-    { Amount: 300, Description: 'clothes', Category: 'Shopping' },
-    { Amount: 450, Description: 'electronics', Category: 'Shopping' },
-    { Amount: 75, Description: 'stationery', Category: 'Misc' }
-  ];
+
+  userId:number = 1;
+  expenseList: IExpense[] =[];
+  // expenseList: IExpense[] = [
+  //   { Amount: 100, Description: 'fruits', Category: 'Food' },
+  //   { Amount: 2000, Description: 'Dolo', Category: 'Medical' },
+  //   { Amount: 200, Description: 'shawayi', Category: 'Food' },
+  //   { Amount: 500, Description: 'mandi', Category: 'Food' },
+  //   { Amount: 150, Description: 'petrol', Category: 'Fuel' },
+  //   { Amount: 300, Description: 'clothes', Category: 'Shopping' },
+  //   { Amount: 450, Description: 'electronics', Category: 'Shopping' },
+  //   { Amount: 75, Description: 'stationery', Category: 'Misc' }
+  // ];
 
   categoryExpenditure: { [key: string]: number } = {};
 
-  constructor() {
+  constructor(private expenseService: ExpenseServiceService) {
     this.categoryExpenditure = this.groupByCategory(this.expenseList);
   }
 
+  ngOnInit(): void {
+    this.expenseService.getNewExpense(this.userId).subscribe({
+      next: (data) => {
+        console.log('Fetched expenses:', data); 
+        this.expenseList = data; 
+        console.log(this.expenseList)
+      },
+      error: (error) => {
+        console.error(error);
+      }
+    })
+  }
+  
   ngAfterViewInit() {
     this.createChart();
-    //this.populateTable();
   }
 
   groupByCategory(expenses: IExpense[]): { [key: string]: number } {
@@ -73,7 +90,7 @@ export class CategoryExpenseComponent implements AfterViewInit {
         plugins: {
           legend: {
             display: true,
-            position: 'bottom', // Adjust as needed
+            position: 'bottom',
           },
         },
       }

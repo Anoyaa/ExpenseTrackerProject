@@ -22,15 +22,15 @@ namespace ExpenseTracker.Application.Requests.Commands.ExpenseCommands
         {
             Expense expense = new Expense();
 
-            expense.User = context.Users.FirstOrDefault(x => x.Id == request.UserId);
+            expense.User = context.Users.FirstOrDefault(x => x.Id == request.UserId); //set id instead of obj, use parametrized ctor
             expense.Date = DateTime.Now;
-            expense.Description = string.IsNullOrEmpty(request.Description) ? "No description provided" : request.Description;
+            expense.Description = string.IsNullOrEmpty(request.Description) ? "No description provided" : request.Description; //make desc nullable in model
             expense.Amount = request.Amount;
 
             var categories = context.Category.Where(x => x.InBuilt == true || x.UserId == request.UserId);
-            expense.Category = categories.FirstOrDefault(x => x.Name == request.CategoryName);
+            expense.Category = categories.FirstOrDefault(x => x.Name == request.CategoryName); //set id not obj //use async fns // pass cancellation token
 
-
+            //add custom cat logic here
             context.Add(expense);
 
             return await context.SaveChangesAsync();

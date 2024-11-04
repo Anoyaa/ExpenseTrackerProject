@@ -14,12 +14,12 @@ namespace ExpenseTracker.Domain
         public int Id { get; set; }
 
         [DataType(DataType.Date)]
-        [Column(TypeName ="Date")]
+        [Column(TypeName ="Date")] //use ientitytype configuration //private set all properties everywhere
         public DateTime Date { get; set; }
         public double Amount { get; set; }
-        public string Description { get; set; }
-        public int UserId { get; set; } 
-        public  Users User { get; set; }
+        public string? Description { get; set; }
+        public int UserId { get; set; }
+        public Users User { get; set; } = null!; 
 
         public int CategoryId {  get; set; }    
         public Category Category { get; set; }
