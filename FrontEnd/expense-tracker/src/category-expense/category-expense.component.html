@@ -50,9 +50,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let expense of expenseList">
-                            <td>{{ expense.Description }}</td>
-                            <td class="text-end">{{ expense.Amount }}</td>
+                        <tr *ngFor="let category of categoryList">
+                            <td>{{ category.name }}</td>
+                            <td class="text-end">{{ category.expenditure }}</td>
                         </tr>
                     </tbody>
                 </table>

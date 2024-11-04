@@ -16,17 +16,13 @@ import { CustomerServiceService } from '../customer-service.service';
 export class SignupPageComponent {
 
   RegisterUser!: FormGroup<IRegister>;
-  //password: string = '';
+
   registerSubmitted: boolean = false;
 
-/**
- *
- */
-constructor(private customerService:CustomerServiceService) { }
+
+  constructor(private customerService: CustomerServiceService) { }
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     this.RegisterUser = new FormGroup<IRegister>
       ({
         name: new FormControl('', Validators.required),
@@ -38,27 +34,13 @@ constructor(private customerService:CustomerServiceService) { }
   AddNewUser() {
     this.registerSubmitted = true;
     if (this.RegisterUser.valid) {
-      console.log("button clicked");
+      //console.log("button clicked");
       const newUser = {
         Name: this.RegisterUser.value.name,
         PhoneNumber: this.RegisterUser.value.phoneNumber,
         Password: this.RegisterUser.value.password,
       }
-      // console.log(newUser.Phone);
-      // console.log(newUser.Name);
       this.customerService.submitNewUser(newUser);
-
-      // this.http.post('http://localhost:5277/api/Users',addNewUser)
-      // .subscribe({
-      //   next:(value)=>
-      //   {
-      //     console.log(value);
-      //     this.RegisterUser.reset();
-      //   },
-      //   error: (err) => {
-      //     console.error('Registration error:', err);
-      //   }
-      // })
     }
   }
 }

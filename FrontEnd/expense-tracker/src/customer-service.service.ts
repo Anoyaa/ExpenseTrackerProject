@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerServiceService {
-  //private SignUpStatus = new Subject<boolean>();
-  //SignUpStatus$ = this.SignUpStatus.asObservable();
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private router:Router) { }
 
   submitNewUser(data: any): any {
      console.log("inside service:");
@@ -17,10 +16,10 @@ export class CustomerServiceService {
       .subscribe({
         next: (value) => {
           console.log(value);
-        //  this.SignUpStatus.next(true);
+          alert("User created successfully");
+          this.router.navigate(['/login-page']);
         },
         error: (err) => {
-        //  this.SignUpStatus.next(false);
           console.error('Registration error:', err);
         }
       })

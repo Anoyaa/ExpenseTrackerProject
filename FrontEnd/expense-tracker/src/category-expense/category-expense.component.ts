@@ -2,14 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, AfterViewInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Chart } from 'chart.js/auto';
-import { ExpenseServiceService } from '../expense-service.service';
+import { CategoryServiceService } from '../category-service.service';
 
-interface IExpense {
-  Amount: number | null;
-  Description: string | null;
-  Category: string | null;
-  Date: Date | null;
+interface ICategory {
+  name: string;
+  expenditure: number;
 }
+
 
 @Component({
   selector: 'app-category-expense',
@@ -19,33 +18,22 @@ interface IExpense {
   styleUrls: ['./category-expense.component.scss']
 })
 
-export class CategoryExpenseComponent implements AfterViewInit {
+export class CategoryExpenseComponent  {
 
-  userId:number = 1;
-  expenseList: IExpense[] =[];
-  // expenseList: IExpense[] = [
-  //   { Amount: 100, Description: 'fruits', Category: 'Food' },
-  //   { Amount: 2000, Description: 'Dolo', Category: 'Medical' },
-  //   { Amount: 200, Description: 'shawayi', Category: 'Food' },
-  //   { Amount: 500, Description: 'mandi', Category: 'Food' },
-  //   { Amount: 150, Description: 'petrol', Category: 'Fuel' },
-  //   { Amount: 300, Description: 'clothes', Category: 'Shopping' },
-  //   { Amount: 450, Description: 'electronics', Category: 'Shopping' },
-  //   { Amount: 75, Description: 'stationery', Category: 'Misc' }
-  // ];
+  userId:number = 3;
+  categoryList:ICategory[]=[];
 
-  categoryExpenditure: { [key: string]: number } = {};
-
-  constructor(private expenseService: ExpenseServiceService) {
-    this.categoryExpenditure = this.groupByCategory(this.expenseList);
+  constructor(private categoryService : CategoryServiceService) {
+    
   }
 
   ngOnInit(): void {
-    this.expenseService.getNewExpense(this.userId).subscribe({
+
+    this.categoryService.getExpenditureByCategory(this.userId).subscribe({
       next: (data) => {
-        console.log('Fetched expenses:', data); 
-        this.expenseList = data; 
-        console.log(this.expenseList)
+        this.categoryList = data; 
+        console.log('Fetched categories:',this.categoryList);
+        this.createChart();
       },
       error: (error) => {
         console.error(error);
@@ -53,23 +41,12 @@ export class CategoryExpenseComponent implements AfterViewInit {
     })
   }
   
-  ngAfterViewInit() {
-    this.createChart();
-  }
 
-  groupByCategory(expenses: IExpense[]): { [key: string]: number } {
-    return expenses.reduce((acc, expense) => {
-      if (!acc[expense.Category!]) {
-        acc[expense.Category!] = 0;
-      }
-      acc[expense.Category!] += expense.Amount!;
-      return acc;
-    }, {} as { [key: string]: number });
-  }
+
 
   createChart() {
-    const labels = Object.keys(this.categoryExpenditure);
-    const dataValues = Object.values(this.categoryExpenditure);
+    const labels = this.categoryList.map(x => x.name);
+    const dataValues = this.categoryList.map(x => x.expenditure);
     const backgroundColors = ["#fd7f6f", "#7eb0d5", "#b2e061", "#bd7ebe", "#ffb55a", "#ffee65", "#beb9db", "#fdcce5", "#8bd3c7"]
 
     const expenseChart = document.getElementById("chartjs-expense-pie") as HTMLCanvasElement;

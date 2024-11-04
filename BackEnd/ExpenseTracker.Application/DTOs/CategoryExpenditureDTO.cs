@@ -8,7 +8,7 @@ namespace ExpenseTracker.Application.DTOs
 {
     public class CategoryExpenditureDTO
     {
-        public string Name {get; set;}
+        public string Name {get; set;} 
         public double Expenditure {get; set;}
     }
 }
