@@ -39,15 +39,9 @@ constructor(private customerService:CustomerServiceService) { }
     if (this.RegisterUser.valid) {
       console.log("button clicked");
       const newUser = {
-<<<<<<< HEAD
-        Name: this.RegisterUser.value.Name,
-        PhoneNumber: this.RegisterUser.value.PhoneNumber,
-        Password: this.RegisterUser.value.Password
-=======
         Name: this.RegisterUser.value.name,
         PhoneNumber: this.RegisterUser.value.phoneNumber,
         Password: this.RegisterUser.value.password,
->>>>>>> combined-app
       }
       // console.log(newUser.Phone);
       // console.log(newUser.Name);
