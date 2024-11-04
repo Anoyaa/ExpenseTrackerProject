@@ -27,10 +27,10 @@ constructor(private customerService:CustomerServiceService) { }
     //Add 'implements OnInit' to the class.
     this.RegisterUser = new FormGroup<IRegister>
       ({
-        Name: new FormControl('', Validators.required),
-        PhoneNumber: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{10}$')]),
-        Password: new FormControl('', [Validators.required, Validators.minLength(8)]),
-        Cpassword: new FormControl('', [Validators.required, Validators.minLength(8)])
+        name: new FormControl('', Validators.required),
+        phoneNumber: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{10}$')]),
+        password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+        cPassword: new FormControl('', [Validators.required, Validators.minLength(8)])
       });
   }
 
@@ -39,9 +39,15 @@ constructor(private customerService:CustomerServiceService) { }
     if (this.RegisterUser.valid) {
       console.log("button clicked");
       const newUser = {
+<<<<<<< HEAD
         Name: this.RegisterUser.value.Name,
         PhoneNumber: this.RegisterUser.value.PhoneNumber,
         Password: this.RegisterUser.value.Password
+=======
+        Name: this.RegisterUser.value.name,
+        PhoneNumber: this.RegisterUser.value.phoneNumber,
+        Password: this.RegisterUser.value.password,
+>>>>>>> combined-app
       }
       // console.log(newUser.Phone);
       // console.log(newUser.Name);

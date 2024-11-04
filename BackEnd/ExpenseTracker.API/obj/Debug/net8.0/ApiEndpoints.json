@@ -1,20 +1,31 @@
 [
   {
+<<<<<<< HEAD
     "ContainingType": "ExpenseTracker.API.Controllers.CategoryController",
     "Method": "GetCategories",
     "RelativePath": "api/Category/By UserId",
+=======
+    "ContainingType": "ExpenseTracker.API.Controllers.ExpenseController",
+    "Method": "GetExpensesByUserId",
+    "RelativePath": "api/Expense",
+>>>>>>> combined-app
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+<<<<<<< HEAD
         "Name": "ReqId",
+=======
+        "Name": "id",
+>>>>>>> combined-app
         "Type": "System.Int32",
         "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
+<<<<<<< HEAD
         "Type": "System.Collections.Generic.List\u00601[[ExpenseTracker.Application.DTOs.CategoryDto, ExpenseTracker.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
@@ -42,6 +53,9 @@
     "ReturnTypes": [
       {
         "Type": "System.Int32",
+=======
+        "Type": "System.Collections.Generic.List\u00601[[ExpenseTracker.Application.DTOs.ExpenseDTO, ExpenseTracker.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+>>>>>>> combined-app
         "MediaTypes": [
           "text/plain",
           "application/json",
