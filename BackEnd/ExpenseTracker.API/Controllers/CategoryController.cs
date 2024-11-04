@@ -17,7 +17,7 @@ namespace ExpenseTracker.API.Controllers
         }
 
         [HttpGet]
-        public async Task<List<string>> GetCategoriesByUserId(int id)
+        public async Task<List<CategoryDTO>> GetCategoriesByUserId(int id)
         {
             GetCategoriesQuery query = new GetCategoriesQuery();
             query.UserId = id;

@@ -12,6 +12,6 @@ export class CategoryServiceService {
   getCategoryList(userId:number) : Observable<any>{
     //console.log(userId)
     const params = new HttpParams().set('id', userId);
-    return this.http.get<string[]>(`http://localhost:5277/api/Category`, { params });
+    return this.http.get<any>(`http://localhost:5277/api/Category`, { params });
   }
 }

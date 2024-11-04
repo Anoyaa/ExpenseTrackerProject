@@ -8,22 +8,22 @@ import { CategoryServiceService } from '../category-service.service';
 @Component({
   selector: 'app-add-expense',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './add-expense.component.html',
   styleUrl: './add-expense.component.scss'
 })
 export class AddExpenseComponent {
 
-  expenseSubmitted:boolean=false;
+  expenseSubmitted: boolean = false;
   addExpenseDetails!: FormGroup<IExpenseInterface>;
-  categoryList:string[] = [];
-  UserId:number=3
+  categoryList: string[] = [];
+  UserId: number = 3
 
   constructor(private expenseService: ExpenseServiceService, private categoryService: CategoryServiceService) { }
 
   today: Date = new Date();
   dd = (this.today.getDate()).toString();
-  mm = (this.today.getMonth() + 1).toString(); 
+  mm = (this.today.getMonth() + 1).toString();
   yyyy = (this.today.getFullYear()).toString();
 
   shownDate = this.yyyy + '-' + this.mm + '-' + this.dd;
@@ -39,25 +39,25 @@ export class AddExpenseComponent {
 
     this.categoryService.getCategoryList(this.UserId).subscribe({
       next: (data) => {
-          this.categoryList = data;
-          console.log(this.categoryList);
+        console.log(data);
+        this.categoryList = data.map((category: { name: string }) => category.name);
       },
       error: (error) => {
-          console.log(error)
+        console.log(error)
       }
     })
   }
 
   addExpense() {
-    this.expenseSubmitted=true;
+    this.expenseSubmitted = true;
 
     if (this.addExpenseDetails.valid) {
       const newExpense =
       {
         Amount: this.addExpenseDetails.value.Amount,
         Description: this.addExpenseDetails.value.Description,
-        CategoryName:this.addExpenseDetails.value.Category,
-        UserId:this.UserId
+        CategoryName: this.addExpenseDetails.value.Category,
+        UserId: this.UserId
       }
       this.expenseService.submitNewExpense(newExpense);
     }

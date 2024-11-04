@@ -12,14 +12,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ExpenseTracker.Application.Requests.Queries
 {
-    public class GetCategoriesQuery : IRequest<List<string>>
+    public class GetCategoriesQuery : IRequest<List<CategoryDTO>>
     {
         public int UserId { get; set; }
     }
 
-    public class GetCategoriesQueryHandler(ExpenseTrackerContext context) : IRequestHandler<GetCategoriesQuery, List<string>>
+    public class GetCategoriesQueryHandler(ExpenseTrackerContext context) : IRequestHandler<GetCategoriesQuery, List<CategoryDTO>>
     {
-        public async Task<List<string>> Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
+        public async Task<List<CategoryDTO>> Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
         {
             Users requiredUser = context.Users.FirstOrDefault(x => x.Id == request.UserId);
             List<string> categoryList = new List<string>();
@@ -30,10 +30,10 @@ namespace ExpenseTracker.Application.Requests.Queries
                         {
                             Name = category.Name,
                         };
-            var data= query.ToListAsync(cancellationToken);
+            var data = query.ToListAsync(cancellationToken);
 
 
-            return data;
+            return await data;
         }
     }
 }
