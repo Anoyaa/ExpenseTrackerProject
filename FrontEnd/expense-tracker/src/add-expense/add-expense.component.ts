@@ -4,6 +4,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { IExpenseInterface } from '../i-expense.interface';
 import { CategoryServiceService } from '../category-service.service';
+import { UserIdService } from '../user-id.service';
 
 @Component({
   selector: 'app-add-expense',
@@ -17,9 +18,9 @@ export class AddExpenseComponent {
   expenseSubmitted: boolean = false;
   addExpenseDetails!: FormGroup<IExpenseInterface>;
   categoryList: string[] = [];
-  UserId: number = 3
+  UserId: number = 1;
 
-  constructor(private expenseService: ExpenseServiceService, private categoryService: CategoryServiceService) { }
+  constructor(private expenseService: ExpenseServiceService, private categoryService: CategoryServiceService,private userIdService : UserIdService) { }
 
   today: Date = new Date();
   dd = (this.today.getDate()).toString();
@@ -29,6 +30,8 @@ export class AddExpenseComponent {
   shownDate = this.yyyy + '-' + this.mm + '-' + this.dd;
 
   ngOnInit(): void {
+    //this.UserId = this.userIdService.getUserId()
+    console.log("userId in add-expense",this.UserId)
     this.addExpenseDetails = new FormGroup<IExpenseInterface>
       ({
         Amount: new FormControl(0, [Validators.required]),

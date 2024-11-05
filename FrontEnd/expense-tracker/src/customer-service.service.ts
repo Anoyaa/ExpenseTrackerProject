@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Subject } from 'rxjs';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -23,6 +23,10 @@ export class CustomerServiceService {
           console.error('Registration error:', err);
         }
       })
+  }
+
+  checkUserDetails(data:any): Observable<number> {
+    return this.http.post<number>(`http://localhost:5277/api/Users/Login`, data);
   }
 
 }

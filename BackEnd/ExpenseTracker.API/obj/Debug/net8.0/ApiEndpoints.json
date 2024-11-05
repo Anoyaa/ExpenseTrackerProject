@@ -156,6 +156,32 @@
     ]
   },
   {
+    "ContainingType": "ExpenseTracker.API.Controllers.UsersController",
+    "Method": "LoginCheck",
+    "RelativePath": "api/Users/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginQuery",
+        "Type": "ExpenseTracker.Application.Requests.Queries.LoginQuery",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ExpenseTracker.API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

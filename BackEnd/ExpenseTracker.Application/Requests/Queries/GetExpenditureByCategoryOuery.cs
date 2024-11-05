@@ -28,7 +28,7 @@ namespace ExpenseTracker.Application.Requests.Queries
                 {
                     Name = c.Name,
                     TotalExpense = _context.Expense
-                        .Where(e => e.CategoryId == c.Id) 
+                        .Where(e => e.CategoryId == c.Id && e.UserId == request.UserId) 
                         .Sum(e => (double?)e.Amount) ?? 0 
                 })
                 .Where(c => c.TotalExpense > 0) // non-zero filter

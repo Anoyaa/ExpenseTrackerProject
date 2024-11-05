@@ -7,6 +7,8 @@ using System.Globalization;
 using ExpenseTracker.Application.DTOs;
 using ExpenseTracker.Infrastructure.Data;
 using MediatR;
+using Microsoft.VisualBasic;
+using System.Data;
 
 namespace ExpenseTracker.Application.Requests.Queries
 {
@@ -29,15 +31,28 @@ namespace ExpenseTracker.Application.Requests.Queries
             var yearlyTotal = _context.Expense.Where(e => e.UserId == request.UserId
                                                       && e.Date.Year == DateTime.Now.Year)
                                                 .Sum(e => e.Amount);
-            
-            CultureInfo myCI = new CultureInfo("en-US");
-            Calendar myCal = myCI.Calendar;
+            //week calculations
+           // CultureInfo myCI = new CultureInfo("en-US");
+           // Calendar myCal = myCI.Calendar;
 
-            var currentWeek = myCal.GetWeekOfYear;
+           //// CalendarWeekRule myCWR = myCI.DateTimeFormat.CalendarWeekRule;
+           // DayOfWeek myFirstDOW = myCI.DateTimeFormat.FirstDayOfWeek;
+           // DateTime currentDate = DateTime.Now;
+           // var currentWeek = myCal.GetWeekOfYear(currentDate, CalendarWeekRule.FirstDay, myFirstDOW);
 
-            TotalExpenseDTO totalExpenseDTO = new();
-            totalExpenseDTO.YearlyExpense = yearlyTotal;
-            totalExpenseDTO.MonthlyExpense = monthlyTotal;
+
+           // var weeklyTotal = _context.Expense.Where(e => e.UserId == request.UserId
+           //                                           && myCal.GetWeekOfYear(e.Date, CalendarWeekRule.FirstDay, myFirstDOW) == currentWeek
+           //                                           && e.Date.Month == DateTime.Now.Month
+           //                                           && e.Date.Year == DateTime.Now.Year)
+           //                                     .Sum(e => e.Amount);
+
+            TotalExpenseDTO totalExpenseDTO = new()
+            {
+                YearlyExpense = yearlyTotal,
+                MonthlyExpense = monthlyTotal,
+                //WeeklyExpense = weeklyTotal
+            };
             return await Task.FromResult(totalExpenseDTO);
         }
     }
