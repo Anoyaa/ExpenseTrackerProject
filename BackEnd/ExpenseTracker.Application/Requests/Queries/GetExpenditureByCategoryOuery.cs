@@ -32,10 +32,10 @@ namespace ExpenseTracker.Application.Requests.Queries
                         .Sum(e => (double?)e.Amount) ?? 0 
                 })
                 .Where(c => c.TotalExpense > 0) // non-zero filter
-                .Select(c => new CategoryExpenditureDTO
+                .Select(x => new CategoryExpenditureDTO
                 {
-                    Name = c.Name,
-                    Expenditure = c.TotalExpense
+                    Name = x.Name,
+                    Expenditure = x.TotalExpense
                 })
                 .ToListAsync(cancellationToken);
 

@@ -104,6 +104,32 @@
     ]
   },
   {
+    "ContainingType": "ExpenseTracker.API.Controllers.ExpenseController",
+    "Method": "GetTotalExpensesByDate",
+    "RelativePath": "api/Expense/TotalByDate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ExpenseTracker.Application.DTOs.TotalExpenseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ExpenseTracker.API.Controllers.UsersController",
     "Method": "AddUser",
     "RelativePath": "api/Users",
