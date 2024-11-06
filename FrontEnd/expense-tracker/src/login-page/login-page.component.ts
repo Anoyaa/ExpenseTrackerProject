@@ -39,7 +39,7 @@ export class LoginPageComponent {
           if (data !== 0) {
             console.log("user id is", data);
             this.userIdService.setUserId(data)
-            this.router.navigate(['/category-expense'])
+            this.router.navigate(['/track-expense'])
           }
           else {
             alert("Invalid Username or Password");

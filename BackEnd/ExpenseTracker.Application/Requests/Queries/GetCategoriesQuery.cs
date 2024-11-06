@@ -21,7 +21,7 @@ namespace ExpenseTracker.Application.Requests.Queries
     {
         public async Task<List<CategoryDTO>> Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
         {
-            Users requiredUser = context.Users.FirstOrDefault(x => x.Id == request.UserId);
+            User requiredUser = context.User.FirstOrDefault(x => x.Id == request.UserId);
             List<string> categoryList = new List<string>();
 
             var query = from category in context.Category

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Chart } from 'chart.js/auto';
 import { CategoryServiceService } from '../category-service.service';
@@ -19,30 +19,43 @@ interface ICategory {
   styleUrls: ['./category-expense.component.scss']
 })
 
-export class CategoryExpenseComponent  {
+export class CategoryExpenseComponent implements AfterViewInit {
 
-  userId:number = 1;
-  categoryList:ICategory[]=[];
+  userId: any =3;
+  categoryList: ICategory[] = [];
 
-  constructor(private categoryService : CategoryServiceService,private userIdService : UserIdService) {
+  constructor(private categoryService: CategoryServiceService, private userIdService: UserIdService) {
+
+  }
+  ngAfterViewInit(): void {
     
   }
 
   ngOnInit(): void {
-    //this.userId= this.userIdService.getUserId()
-    console.log("in catexpense, userid is",this.userId)
+    // this.userIdService.getUserId().subscribe({
+    //   next: (data) => {
+    //     this.userId = data;
+    //   },
+    //   error: (error) => {
+    //     console.error(error);
+    //   }
+    // })
+    //this.userId=this.userIdService.userId;
+
+    console.log("in catexpense, userid is", this.userId)
     this.categoryService.getExpenditureByCategory(this.userId).subscribe({
       next: (data) => {
-        this.categoryList = data; 
-        console.log('Fetched categories:',this.categoryList);
+        this.categoryList = data;
+        console.log('Fetched categories:', this.categoryList);
         this.createChart();
       },
       error: (error) => {
         console.error(error);
       }
     })
+    
   }
-  
+
 
 
 

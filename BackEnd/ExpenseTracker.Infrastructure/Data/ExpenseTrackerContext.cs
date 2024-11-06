@@ -13,7 +13,7 @@ namespace ExpenseTracker.Infrastructure.Data
         public ExpenseTrackerContext(DbContextOptions<ExpenseTrackerContext> options) : base(options) 
         {     
         }
-        public DbSet<Users> Users { get; set; }
+        public DbSet<User> User { get; set; }
         public DbSet<Expense> Expense { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<Budget> Budget { get; set; }

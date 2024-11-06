@@ -22,8 +22,8 @@ namespace ExpenseTracker.Application.Requests.Commands.ExpenseCommands
         {
             Expense expense = new Expense();
 
-            expense.User = context.Users.FirstOrDefault(x => x.Id == request.UserId); //set id instead of obj, use parametrized ctor
-            expense.Date = DateTime.Now;
+            expense.User = context.User.FirstOrDefault(x => x.Id == request.UserId); //set id instead of obj, use parametrized ctor
+            expense.Date = DateOnly.FromDateTime(DateTime.Now);
             expense.Description = string.IsNullOrEmpty(request.Description) ? "No description provided" : request.Description; //make desc nullable in model
             expense.Amount = request.Amount;
 

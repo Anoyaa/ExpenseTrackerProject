@@ -7,7 +7,7 @@ import { Observable, of } from 'rxjs';
 })
 export class UserIdService {
 
-  userId: number| null = 0;
+  private userId?: number;
   constructor(private customerService: CustomerServiceService) { }
 
   setUserId(id: number): void {
@@ -15,10 +15,10 @@ export class UserIdService {
     console.log("SETuserid calledd")
   }
 
-  getUserId(): Observable<number>{
-    console.log("GETuserid calledd")
-    return of(this.userId!);
+  getUserId(): number {
+    // if(!this.userId){
+    //   return this.customerService.checkUserDetails()
+    // }
+   return this.userId ?? 0;
   }
-
-
 }

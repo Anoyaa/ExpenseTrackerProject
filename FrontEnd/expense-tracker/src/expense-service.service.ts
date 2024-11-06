@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { TotalExpenseList } from './track-expense/total-expense-list';
+import { RetrievedExpense } from './retrieved-expense';
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +25,22 @@ export class ExpenseServiceService {
 
   }
 
-  getNewExpense(id: number): Observable<any> {
+  getNewExpense(id: number): Observable<RetrievedExpense[]> {
     const params = new HttpParams().set('id', id);
-    return this.http.get(`http://localhost:5277/api/Expense`, { params });
+    return this.http.get<RetrievedExpense[]>(`http://localhost:5277/api/Expense`, { params });
+  }
+
+  getTotalExpense(id: number): Observable<TotalExpenseList> {
+    const params = new HttpParams().set('id', id);
+    console.log();
+    return this.http.get<TotalExpenseList>(`http://localhost:5277/api/Expense/TotalByDate`, { params });
+  }
+
+  getFilterExpense(id: number, startDate: Date, endDate: Date): Observable<any> {
+    const formattedStartDate = startDate.toISOString().split('T')[0];
+    const formattedEndDate = endDate.toISOString().split('T')[0];
+    const params = new HttpParams().set('id', id).set('startDate', startDate.toDateString()).set('endDate', endDate.toDateString());
+    console.log(formattedStartDate, formattedEndDate);
+    return this.http.get('http://localhost:5277/api/Expense/ExpenseByDate', { params });
   }
 }

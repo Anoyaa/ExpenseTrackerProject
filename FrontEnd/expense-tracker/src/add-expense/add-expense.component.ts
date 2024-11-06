@@ -18,7 +18,7 @@ export class AddExpenseComponent {
   expenseSubmitted: boolean = false;
   addExpenseDetails!: FormGroup<IExpenseInterface>;
   categoryList: string[] = [];
-  UserId: number = 1;
+  UserId: number = 3;
 
   constructor(private expenseService: ExpenseServiceService, private categoryService: CategoryServiceService,private userIdService : UserIdService) { }
 

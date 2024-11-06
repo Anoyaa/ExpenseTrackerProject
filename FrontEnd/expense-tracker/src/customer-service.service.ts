@@ -17,7 +17,7 @@ export class CustomerServiceService {
         next: (value) => {
           console.log(value);
           alert("User created successfully");
-          this.router.navigate(['/login-page']);
+          this.router.navigate(['']);
         },
         error: (err) => {
           console.error('Registration error:', err);

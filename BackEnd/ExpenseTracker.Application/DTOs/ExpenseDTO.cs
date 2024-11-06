@@ -13,6 +13,6 @@ namespace ExpenseTracker.Application.DTOs
         public string Description { get; set; }
         public string CategoryName { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateOnly Date { get; set; }
     }
 }

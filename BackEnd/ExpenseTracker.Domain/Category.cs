@@ -6,6 +6,6 @@
         public string Name { get; set; } = string.Empty;
         public bool InBuilt { get; set; }
         public int? UserId { get; set; }
-        public Users? User { get; set; }
+        public User? User { get; set; }
     }
 }

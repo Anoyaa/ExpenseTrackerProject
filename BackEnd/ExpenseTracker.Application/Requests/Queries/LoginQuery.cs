@@ -20,7 +20,7 @@ namespace ExpenseTracker.Application.Requests.Queries
 
         public async Task<int> Handle(LoginQuery request, CancellationToken cancellationToken)
         {
-            var requiredUser = _context.Users.FirstOrDefault(x => x.PhoneNumber == request.phone
+            var requiredUser = _context.User.FirstOrDefault(x => x.PhoneNumber == request.phone
                                                                   && x.Password == request.password);
             if (requiredUser == null)
             {

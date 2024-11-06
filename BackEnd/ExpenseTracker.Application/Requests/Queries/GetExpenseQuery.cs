@@ -31,7 +31,7 @@ namespace ExpenseTracker.Application.Requests.Queries
             List<ExpenseDTO> ExpenseList = [];
 
             var query = from expense in context.Expense
-                        join user in context.Users on expense.UserId equals user.Id
+                        join user in context.User on expense.UserId equals user.Id
                         join category in context.Category on expense.CategoryId equals category.Id
                         where expense.UserId == request.UserId
                         select new
