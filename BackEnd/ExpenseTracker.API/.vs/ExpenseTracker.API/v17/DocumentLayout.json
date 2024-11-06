@@ -30,6 +30,10 @@
           "SelectedChildIndex": 5,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UsersController.cs",
@@ -39,8 +43,7 @@
               "RelativeToolTip": "Controllers\\UsersController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T13:38:23.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T13:38:23.61Z"
             },
             {
               "$type": "Document",
@@ -52,12 +55,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\GetCategoriesQuery.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAxwB8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:26:39.216Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2024-11-06T12:26:39.216Z"
             },
             {
               "$type": "Document",
@@ -69,8 +67,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\GetExpenditureByCategoryOuery.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAYwCEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:22:04.002Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T12:22:04.002Z"
             },
             {
               "$type": "Document",
@@ -82,8 +79,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Commands\\CategoryCommands\\AddCustomCategoryCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T09:35:29.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T09:35:29.218Z"
             },
             {
               "$type": "Document",

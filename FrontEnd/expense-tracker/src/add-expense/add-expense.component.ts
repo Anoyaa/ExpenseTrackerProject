@@ -87,11 +87,13 @@ export class AddExpenseComponent {
     this.categoryService.addNewCategory(postedCategory).subscribe({
       next: (response) => {
         this.addCategoryFlag = false;
+        this.categoryList.push({name : postedCategory.name})
         alert("New category added!");
       },
       error: (error) => {
         console.error('Error adding category:', error);
       }
     });
+
   }
 }
