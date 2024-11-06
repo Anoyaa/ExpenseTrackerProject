@@ -2,20 +2,22 @@
     <div>
         <ul class="nav nav-tabs mb-3 ">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="http://localhost:4200/track-expense">Track
+                <a class="nav-link active" aria-current="page" href="/track-expense">Track
                     Expense</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://localhost:4200/add-expense">Add Expense</a>
+                <a [routerLink]="['/add-expense']">Link Text</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://localhost:4200/category-expense">Category Expense</a>
+                <a class="nav-link" href="/category-expense">Category Expense</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://localhost:4200/view-profile">View Profile</a>
+                <a class="nav-link" href="/view-profile">View Profile</a>
             </li>
         </ul>
     </div>
+    UserId {{userId}}
+    IsLoading {{isLoading}}
     <div class="row" *ngIf="!isLoading">
             <div class="row">
                 <div class="col-sm-4 mb-3">
@@ -52,33 +54,33 @@
             <input type="date" placeholder="endDate" (change)="onSelectEnd($event)">
             <button class="btn btn-primary" (click)="applyFilter()">Apply</button>
             <ul *ngIf="!filter">
-                <span>HI</span>
-                <div>{{expenseList | json}}</div>
+                <!-- <span>HI</span>
+                <div>{{expenseList | json}}</div> -->
                 <li *ngFor="let expense of expenseList">
                     <div class="card">
                         <div class="card-body">
-                            <div>{{expense.description }}</div>
+                            <!-- <div>{{expense.description }}</div>
                             <div>{{ expense.categoryName }}</div>
-                            <div>{{expense.amount }}</div>
-                            <!-- <tr>
+                            <div>{{expense.amount }}</div> -->
+                            <tr>
                                 <td>
-                                    <h5> {{expense.description }}</h5>
+                                    <h5> {{expense?.description }}</h5>
                                 </td>
                                 <td>
-                                    <p> Amount: Rs.{{ expense.amount }}</p>
+                                    <p> Amount: Rs.{{ expense?.amount }}</p>
                                 </td>
                                 <td>
-                                    <p class="card-text"> Category: {{ expense.categoryName }}</p>
+                                    <p class="card-text"> Category: {{ expense?.categoryName }}</p>
                                 </td>
                                 <td>
-                                    <p> Date: {{expense.date|date}}</p>
+                                    <p> Date: {{expense?.date|date}}</p>
                                 </td>
-                            </tr> -->
+                            </tr>
                         </div>
                     </div>
                 </li>
             </ul>
-            <!-- <ul *ngIf="filter">
+            <ul *ngIf="filter">
                 <li *ngFor="let expenseFilter of expenseFilterList ">
                     <div class="card">
                         <div class="card-body">
@@ -99,7 +101,7 @@
                         </div>
                     </div>
                 </li>
-            </ul> -->
+            </ul>
         </div>
     </div>
 </div>

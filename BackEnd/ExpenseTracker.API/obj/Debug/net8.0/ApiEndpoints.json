@@ -27,6 +27,32 @@
   },
   {
     "ContainingType": "ExpenseTracker.API.Controllers.CategoryController",
+    "Method": "AddCustomCategory",
+    "RelativePath": "api/Category",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "ExpenseTracker.Application.Requests.Commands.CategoryCommands.AddCustomCategoryCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ExpenseTracker.API.Controllers.CategoryController",
     "Method": "GetExpenditureByCategory",
     "RelativePath": "api/Category/expenditure",
     "HttpMethod": "GET",

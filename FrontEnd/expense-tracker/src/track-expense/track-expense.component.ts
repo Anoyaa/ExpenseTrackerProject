@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { UserIdService } from '../user-id.service';
 import { TotalExpenseList } from './total-expense-list';
 import { RetrievedExpense } from '../retrieved-expense';
+import { Router, RouterModule } from '@angular/router';
 
 export interface UserProfile {
   monthlyExpense: number;
@@ -17,7 +18,7 @@ export interface UserProfile {
 @Component({
   selector: 'app-track-expense',
   standalone: true,
-  imports: [ViewProfileComponent,TrackExpenseComponent,CategoryExpenseComponent,AddExpenseComponent,CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './track-expense.component.html',
   styleUrl: './track-expense.component.scss'
 })
@@ -26,7 +27,7 @@ export class TrackExpenseComponent {
 
 expenseList:RetrievedExpense[]=[];
 expenseFilterList:any[]=[];
-userId:number = 0;
+userId = 0;
 today = new Date();
 startDate : Date=new Date();
 endDate :Date=new Date();
@@ -37,13 +38,12 @@ isLoading = true;
 constructor(private expenseService: ExpenseServiceService, private useridService: UserIdService) { }
 
 ngOnInit(): void {
- this.userId = this.useridService.getUserId();
+ this.userId = this.useridService.userId;
  this.filter=false;
   this.expenseService.getNewExpense(this.userId).subscribe({
     next: (data) => {
       // console.log('initially Fetched expenses:', data); 
       this.expenseList = data; 
-      this.isLoading = false;
     },
     error: (error) => {
       console.error(error);
@@ -56,7 +56,6 @@ ngOnInit(): void {
      this.totalExpenseList = data;
      this.yearlyExpense = data.yearlyExpense;
      this.isLoading = false;
-     debugger;
     },
     error: (error) => {
       console.error(error);

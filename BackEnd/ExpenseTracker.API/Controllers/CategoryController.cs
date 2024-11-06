@@ -1,4 +1,5 @@
 ﻿using ExpenseTracker.Application.DTOs;
+using ExpenseTracker.Application.Requests.Commands.CategoryCommands;
 using ExpenseTracker.Application.Requests.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -31,5 +32,13 @@ namespace ExpenseTracker.API.Controllers
             query.UserId = id;
             return await mediator.Send(query);
         }
+
+        [HttpPost]
+        public async Task<int> AddCustomCategory([FromBody]AddCustomCategoryCommand command)
+        {
+            
+            return await mediator.Send(command);
+        }
+        
     }
 }

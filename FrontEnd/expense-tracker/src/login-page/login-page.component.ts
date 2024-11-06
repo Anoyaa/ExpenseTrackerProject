@@ -31,8 +31,8 @@ export class LoginPageComponent {
     if (this.loginForm.valid) {
       const userData =
       {
-        phone: String = this.loginForm.value.phoneNumber,
-        password: String = this.loginForm.value.password
+        phone: this.loginForm.value.phoneNumber,
+        password: this.loginForm.value.password
       }
       this.customerService.checkUserDetails(userData).subscribe({
         next: (data) => {

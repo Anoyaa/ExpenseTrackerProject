@@ -8,18 +8,35 @@
 </head>
 
 <body class="d-flex bg-color container">
-    <div class="col-12 d-flex justify-content-center heightss">
+    <div>
+        <ul class="nav nav-tabs mb-3 ">
+            <li class="nav-item">
+                <a class="nav-link " href="/track-expense">Track Expense</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/add-expense']">Link Text</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/category-expense">Category Expense</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/view-profile">View Profile</a>
+            </li>
+        </ul>
+    </div>
+    <div class="justify-content-center heightss mb-6">
         <form [formGroup]="addExpenseDetails" class="form-group">
 
             <div class="col-12 mb-5">
                 <h2>Add Expense</h2>
             </div>
 
+            <label>Expense Date : </label>
             <div class="input-group mb-3 box-border">
-                <label>Expense Date : </label>
-                <!-- <input type="datetime-local" class="form-control place-color" formControlName="ExpenseDate" id="floatingInputDate" placeholder="Date" max=""> -->
-                <label for="floatingInputDate" [innerText]="shownDate">
-                </label>
+                <input type="date" class="form-control place-color" formControlName="Date" id="floatingInputDate"
+                    placeholder="Date" (change)="onChange($event)">
+                <!-- <label for="floatingInputDate" [innerText]="shownDate">
+                </label> -->
             </div>
 
             <div><label> Expense Amount:</label></div>
@@ -43,16 +60,25 @@
             <div class="input-group mb-2">
                 <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon"
                     formControlName="Category">
-                    <option *ngFor="let item of categoryList">{{item}}</option>
+                    <option *ngFor="let item of categoryList">{{item.name}}</option>
                 </select>
-                <button class="btn btn-secondary" type="button">Add New Category</button>
+                <button class="btn btn-secondary" type="button" (click)="addCategoryFlag = true">Add New
+                    Category</button>
             </div>
             <div class="mb-4" *ngIf="addExpenseDetails.get('Category')?.invalid && expenseSubmitted">Select a Category
-                of expense </div>
-
-            <div>
-                <button class="btn btn-primary" (click)="addExpense()">Add Expense</button>
+                of expense
             </div>
         </form>
+        <div *ngIf="addCategoryFlag">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter Category" [(ngModel)]="categoryName">
+                <div class="input-group-append">
+                    <button class="btn btn-secondary" (click)="addCategory()">add</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-primary" (click)="addExpense()">Add Expense</button>
+        </div>
     </div>
 </body>

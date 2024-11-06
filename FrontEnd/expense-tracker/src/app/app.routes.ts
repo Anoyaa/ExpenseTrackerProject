@@ -9,7 +9,7 @@ import { AddExpenseComponent } from '../add-expense/add-expense.component';
 export const routes: Routes =
  [
     {path:'', component:LoginPageComponent},
-    {path:'login-page',component:LoginPageComponent},
+    //{path:'login-page',component:LoginPageComponent},
     {path: 'signup-page',component:SignupPageComponent},
     {path:'view-profile',component:ViewProfileComponent},
     {path: 'category-expense',component:CategoryExpenseComponent},
