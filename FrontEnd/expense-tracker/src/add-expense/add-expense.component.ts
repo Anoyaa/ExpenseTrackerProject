@@ -34,8 +34,8 @@ export class AddExpenseComponent {
     const selectedDateObj = new Date(selectedDate);
     const today = new Date();
 
-    if (selectedDateObj > today) {
-      alert("Select current date or a past date !!");  
+    if ((selectedDateObj  > today)&& selectedDateObj ){
+      alert("Select current date or a past date (upto previous month!!");  
       this.addExpenseDetails.reset();
     }
   }  

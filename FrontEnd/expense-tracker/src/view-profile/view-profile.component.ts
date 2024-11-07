@@ -24,7 +24,7 @@ export class ViewProfileComponent {
   amount:number=0;
   userData: UserProfile | null = null;
   update: boolean=false;
-
+  updateBudgetClick:boolean=false;
   constructor(private profile: ProfileService,private UserIdService:UserIdService) { }
 
   ngOnInit(): void {
@@ -45,6 +45,7 @@ export class ViewProfileComponent {
   }
 
   onConfirm() {
+    this.update=false;
     this.profile.updateBudgetService(this.id,this.amount).subscribe({
       next: (data) => {
         console.log('Fetched expenses budget update:', data);

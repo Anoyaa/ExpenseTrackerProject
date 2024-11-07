@@ -147,8 +147,7 @@
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T07:00:43.636Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -173,8 +172,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\GetExpenseByDateQueryHandler.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAACAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:31:15.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:31:15.211Z"
             },
             {
               "$type": "Document",
@@ -186,8 +184,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Commands\\UserCommands\\AddUserCommandHandler.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T04:00:10.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T04:00:10.694Z"
             },
             {
               "$type": "Document",
@@ -199,8 +196,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Commands\\CategoryCommands\\AddCustomCategoryCommandHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:03:08.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:03:08.169Z"
             },
             {
               "$type": "Document",
@@ -212,8 +208,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Commands\\ExpenseCommands\\AddExpenseCommandHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T14:55:15.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T14:55:15.268Z"
             },
             {
               "$type": "Document",
@@ -225,8 +220,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Commands\\ExpenseCommands\\RemoveExpenseCommandHandler.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T06:25:16.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T06:25:16.756Z"
             },
             {
               "$type": "Document",
@@ -238,8 +232,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Commands\\BudgetCommands\\UpdateBudgetCommandHandler.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAzwCMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T13:46:28.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T13:46:28.351Z"
             },
             {
               "$type": "Document",
@@ -251,8 +244,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\LoginQueryHandler.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T04:19:55.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T04:19:55.664Z"
             },
             {
               "$type": "Document",
@@ -264,8 +256,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\GetUserByIdQueryHandler.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:31:52.57Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T12:31:52.57Z"
             },
             {
               "$type": "Document",
@@ -277,8 +268,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\GetTotalExpensesQueryHandler.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:41:47.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:41:47.174Z"
             },
             {
               "$type": "Document",
@@ -290,8 +280,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\GetTotalExpensesQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:16:20.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:16:20.289Z"
             },
             {
               "$type": "Document",
@@ -303,8 +292,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\GetExpenseQueryHandler.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAQwCwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:40:18.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:40:18.988Z"
             },
             {
               "$type": "Document",
@@ -316,8 +304,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\GetExpenditureByCategoryQueryHandler.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:42:55.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:42:55.703Z"
             },
             {
               "$type": "Document",
@@ -329,8 +316,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\GetCategoriesQueryHandler.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAmwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:44:21.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:44:21.305Z"
             },
             {
               "$type": "Document",
@@ -342,8 +328,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\GetCategoriesQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:43:59.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:43:59.224Z"
             },
             {
               "$type": "Document",
@@ -355,8 +340,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Commands\\CategoryCommands\\AddCustomCategoryCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:02:55.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:02:55.377Z"
             },
             {
               "$type": "Document",
@@ -368,8 +352,7 @@
               "RelativeToolTip": "Controllers\\UsersController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T04:16:04.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T04:16:04.741Z"
             },
             {
               "$type": "Document",
@@ -381,8 +364,7 @@
               "RelativeToolTip": "Controllers\\ExpenseController.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAgwDUAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:25:30.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:25:30.003Z"
             },
             {
               "$type": "Document",
@@ -394,8 +376,7 @@
               "RelativeToolTip": "Controllers\\BudgetController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T13:56:03.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T13:56:03.018Z"
             },
             {
               "$type": "Document",
@@ -407,8 +388,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Commands\\ExpenseCommands\\AddExpenseCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T14:55:40.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T14:55:40.672Z"
             },
             {
               "$type": "Document",
@@ -420,8 +400,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Commands\\UserCommands\\AddUserCommand.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAuwBEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:58:51.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:58:51.831Z"
             },
             {
               "$type": "Document",
@@ -433,8 +412,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\DTOs\\ExpenseDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:30:08.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:30:08.569Z"
             },
             {
               "$type": "Document",
@@ -446,8 +424,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\GetExpenseQuery.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwA8AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:39:13.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:39:13.527Z"
             },
             {
               "$type": "Document",
@@ -459,8 +436,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\DTOs\\CategoryExpenditureDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:21:01.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:21:01.368Z"
             },
             {
               "$type": "Document",
@@ -472,8 +448,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\DTOs\\TotalExpenseDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T06:22:30.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T06:22:30.045Z"
             },
             {
               "$type": "Document",
@@ -485,8 +460,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Application\\Requests\\Queries\\LoginQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T04:19:43.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T04:19:43.168Z"
             },
             {
               "$type": "Document",
@@ -498,8 +472,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Domain\\Budget.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:51:20.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:51:20.917Z"
             },
             {
               "$type": "Document",
@@ -511,8 +484,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Infrastructure\\Repository.Implementation\\CategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:59:47.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:59:47.46Z"
             },
             {
               "$type": "Document",
@@ -524,8 +496,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Infrastructure\\Repository.Implementation\\UserRepository.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:59:33.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:59:33.375Z"
             },
             {
               "$type": "Document",
@@ -537,8 +508,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Infrastructure\\Data\\ExpenseTrackerContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:57:47.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:57:47.96Z"
             },
             {
               "$type": "Document",
@@ -550,8 +520,7 @@
               "RelativeToolTip": "..\\ExpenseTracker.Domain\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:56:53.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:56:53.549Z"
             },
             {
               "$type": "Document",
